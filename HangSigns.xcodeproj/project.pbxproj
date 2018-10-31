@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		AF09E61821862BB200B0C8C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF09E61721862BB200B0C8C7 /* AppDelegate.swift */; };
-		AF09E61A21862BB200B0C8C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF09E61921862BB200B0C8C7 /* ViewController.swift */; };
 		AF09E61D21862BB200B0C8C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF09E61B21862BB200B0C8C7 /* Main.storyboard */; };
 		AF09E61F21862BC100B0C8C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF09E61E21862BC100B0C8C7 /* Assets.xcassets */; };
 		AF09E62221862BC100B0C8C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF09E62021862BC100B0C8C7 /* LaunchScreen.storyboard */; };
+		AF09E62B2186302A00B0C8C7 /* HandSignsUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF09E62A2186302A00B0C8C7 /* HandSignsUIViewController.swift */; };
+		AF09E62D218658D100B0C8C7 /* VisualRecognitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF09E62C218658D100B0C8C7 /* VisualRecognitionController.swift */; };
+		AF19CE272186E70F00A4E7A2 /* HandSign.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AF19CE262186E70F00A4E7A2 /* HandSign.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AF09E61421862BB200B0C8C7 /* HangSigns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HangSigns.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF09E61721862BB200B0C8C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF09E61921862BB200B0C8C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AF09E61C21862BB200B0C8C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF09E61E21862BC100B0C8C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF09E62121862BC100B0C8C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF09E62321862BC100B0C8C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF09E62A2186302A00B0C8C7 /* HandSignsUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandSignsUIViewController.swift; sourceTree = "<group>"; };
+		AF09E62C218658D100B0C8C7 /* VisualRecognitionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualRecognitionController.swift; sourceTree = "<group>"; };
+		AF19CE262186E70F00A4E7A2 /* HandSign.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = HandSign.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +59,23 @@
 			isa = PBXGroup;
 			children = (
 				AF09E61721862BB200B0C8C7 /* AppDelegate.swift */,
-				AF09E61921862BB200B0C8C7 /* ViewController.swift */,
+				AF09E62A2186302A00B0C8C7 /* HandSignsUIViewController.swift */,
+				AF09E62C218658D100B0C8C7 /* VisualRecognitionController.swift */,
 				AF09E61B21862BB200B0C8C7 /* Main.storyboard */,
 				AF09E61E21862BC100B0C8C7 /* Assets.xcassets */,
-				AF09E62021862BC100B0C8C7 /* LaunchScreen.storyboard */,
+				AF19CE262186E70F00A4E7A2 /* HandSign.mlmodel */,
 				AF09E62321862BC100B0C8C7 /* Info.plist */,
+				AF09E62921862F4400B0C8C7 /* Supporting Files */,
 			);
 			path = HangSigns;
+			sourceTree = "<group>";
+		};
+		AF09E62921862F4400B0C8C7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF09E62021862BC100B0C8C7 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF09E61A21862BB200B0C8C7 /* ViewController.swift in Sources */,
+				AF19CE272186E70F00A4E7A2 /* HandSign.mlmodel in Sources */,
+				AF09E62B2186302A00B0C8C7 /* HandSignsUIViewController.swift in Sources */,
 				AF09E61821862BB200B0C8C7 /* AppDelegate.swift in Sources */,
+				AF09E62D218658D100B0C8C7 /* VisualRecognitionController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

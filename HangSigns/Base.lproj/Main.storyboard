@@ -1,24 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Hand SignsUI View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HandSignsUIViewController" customModule="HangSigns" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EZm-v4-QPx">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agZ-Qw-rOZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="158"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="b8c-3K-QVG">
+                                                <rect key="frame" x="87.5" y="83" width="200" height="6"/>
+                                                <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="5" id="N1T-qg-wdf"/>
+                                                    <constraint firstAttribute="width" constant="200" id="wn9-JF-aDZ"/>
+                                                </constraints>
+                                            </progressView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="b8c-3K-QVG" firstAttribute="centerX" secondItem="agZ-Qw-rOZ" secondAttribute="centerX" id="6Aj-2f-6sb"/>
+                                            <constraint firstAttribute="height" constant="158" id="rCv-zU-dUo"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YV9-Zh-67M">
+                                        <rect key="frame" x="160" y="572" width="55" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="WXK-4X-kxC"/>
+                                            <constraint firstAttribute="height" constant="55" id="WwK-4k-ObD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" image="Photo Camera Icon"/>
+                                        <connections>
+                                            <action selector="captureImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qAs-gG-nsh"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bud-2j-6ne">
+                                        <rect key="frame" x="20" y="20" width="335" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view opaque="NO" alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCC-6S-sx5">
+                                        <rect key="frame" x="0.0" y="489" width="375" height="158"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="158" id="Iwn-y9-eGg"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="agZ-Qw-rOZ" secondAttribute="trailing" id="2my-UD-muL"/>
+                                    <constraint firstAttribute="trailing" secondItem="bud-2j-6ne" secondAttribute="trailing" constant="20" symbolic="YES" id="3oy-hi-ArK"/>
+                                    <constraint firstItem="b8c-3K-QVG" firstAttribute="top" secondItem="bud-2j-6ne" secondAttribute="bottom" constant="20" id="41r-rr-f1f"/>
+                                    <constraint firstAttribute="bottom" secondItem="YV9-Zh-67M" secondAttribute="bottom" constant="20" symbolic="YES" id="BaL-jB-kld"/>
+                                    <constraint firstItem="agZ-Qw-rOZ" firstAttribute="top" secondItem="EZm-v4-QPx" secondAttribute="top" id="CMY-Cc-8Zn"/>
+                                    <constraint firstAttribute="trailing" secondItem="XCC-6S-sx5" secondAttribute="trailing" id="GiC-8O-uqZ"/>
+                                    <constraint firstItem="bud-2j-6ne" firstAttribute="top" secondItem="EZm-v4-QPx" secondAttribute="top" constant="20" symbolic="YES" id="Iuf-4N-Th0"/>
+                                    <constraint firstItem="bud-2j-6ne" firstAttribute="leading" secondItem="EZm-v4-QPx" secondAttribute="leading" constant="20" symbolic="YES" id="Jyv-XA-BDp"/>
+                                    <constraint firstItem="YV9-Zh-67M" firstAttribute="centerX" secondItem="EZm-v4-QPx" secondAttribute="centerX" id="b5D-7E-JNZ"/>
+                                    <constraint firstItem="agZ-Qw-rOZ" firstAttribute="leading" secondItem="EZm-v4-QPx" secondAttribute="leading" id="cU9-Wm-ZfH"/>
+                                    <constraint firstAttribute="bottom" secondItem="XCC-6S-sx5" secondAttribute="bottom" id="gfq-gw-OLS"/>
+                                    <constraint firstItem="XCC-6S-sx5" firstAttribute="leading" secondItem="EZm-v4-QPx" secondAttribute="leading" id="pn4-GA-bMm"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EZm-v4-QPx" secondAttribute="trailing" id="ZXY-iM-XZC"/>
+                            <constraint firstItem="EZm-v4-QPx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="awg-NL-SKb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EZm-v4-QPx" secondAttribute="bottom" id="nd2-th-zG5"/>
+                            <constraint firstItem="EZm-v4-QPx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wFy-EN-r7h"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="capturePreviewView" destination="EZm-v4-QPx" id="1Ib-pa-G5q"/>
+                        <outlet property="confidenceBar" destination="b8c-3K-QVG" id="LMk-r3-afJ"/>
+                        <outlet property="photoCaptureButton" destination="YV9-Zh-67M" id="did-F5-dvC"/>
+                        <outlet property="predictionLabel" destination="bud-2j-6ne" id="clQ-YA-xS4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="56.799999999999997" y="26.53673163418291"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Photo Camera Icon" width="24" height="24"/>
+    </resources>
 </document>
